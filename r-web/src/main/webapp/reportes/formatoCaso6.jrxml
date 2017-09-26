@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a521d61-f03b-4891-ae30-fdc8b48c7859">
+	<property name="ireport.zoom" value="1.650000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="3ddd52cc-63ed-4bdb-a9ac-aed3322b93cc">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tiposDocumento" class="java.util.List"/>
+	<parameter name="generos" class="java.util.List"/>
+	<parameter name="etnias" class="java.util.List"/>
+	<parameter name="estadosCiviles" class="java.util.List"/>
+	<parameter name="nivelesEducativos" class="java.util.List"/>
+	<parameter name="ocupaciones" class="java.util.List"/>
+	<parameter name="organizaciones" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="170" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b762912e-bfd1-4545-95d6-5621df1ddf7a" positionType="Float" x="1" y="36" width="290" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[**Si eligió si responda als siguientes preguntas, de lo contrario omítalas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="2" y="6" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Se considera en riesgo ?:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="2" y="53" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Por qué se considera en riesgo ?]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="137" y="64" width="431" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="291" y="72" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ Ante quien ? (Si respondió si):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="441" y="81" width="127" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="117" y="8" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="137" y="8" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="137" y="20" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="117" y="20" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="2" y="70" width="187" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Ha solicitado alguna medida de protección ?:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="192" y="84" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="192" y="72" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="212" y="72" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="212" y="84" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="193" y="118" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="291" y="106" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ Por quien ? (Si respondió si):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="441" y="115" width="127" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="193" y="106" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="4" y="106" width="187" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Le ha sido brindada alguna protección ?:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="211" y="118" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="211" y="106" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="439" y="149" width="127" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="2" y="140" width="187" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ Conisdera que son adecuadas ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="209" y="140" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="289" y="140" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ Por qué? (Si respondió si):]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="192" y="152" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="192" y="138" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="209" y="152" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

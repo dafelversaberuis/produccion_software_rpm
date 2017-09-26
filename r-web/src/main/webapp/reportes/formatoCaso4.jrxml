@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ea2ed2ef-69a5-42f8-8d5c-bc59479b18f1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="909d8452-e1dc-4f25-a704-90ef29b29ea0">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="actores" class="java.util.List"/>
+	<parameter name="generos2" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="207" splitType="Stretch">
+			<line>
+				<reportElement uuid="62c8bc69-3a53-4b4b-817c-9a3c2e380ea2" positionType="Float" x="132" y="50" width="440" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="750893c0-be80-45cb-8eff-5ea157e9a0b7" positionType="Float" x="4" y="5" width="100" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ Conoce el agresor ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a034cc55-262a-4268-83e8-bbcb6e191bb4" positionType="Float" x="3" y="38" width="235" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Nombre y/o alias (Si eligió SI)]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="9f0e2d35-1f6b-41ed-8905-21fe1decacac" positionType="Float" x="111" y="5" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="ccf67aca-aacc-4c42-bcb5-38a917fcec5a" positionType="Float" x="131" y="5" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="111" y="17" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="131" y="17" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="355" y="17" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FEMENINO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="335" y="17" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="750893c0-be80-45cb-8eff-5ea157e9a0b7" positionType="Float" x="303" y="5" width="100" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Sexo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ccf67aca-aacc-4c42-bcb5-38a917fcec5a" positionType="Float" x="355" y="5" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[MASCULINO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="9f0e2d35-1f6b-41ed-8905-21fe1decacac" positionType="Float" x="335" y="5" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="355" y="29" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[AMBOS]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="335" y="29" width="14" height="12"/>
+			</ellipse>
+			<componentElement>
+				<reportElement uuid="826a73f1-e2bd-48ec-ad47-bbdac7eb7b9d" positionType="Float" x="43" y="62" width="214" height="13"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="481055d3-1c94-4086-9db9-64b2d7036074">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource((java.util.List)$P{generos2})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="214">
+						<textField>
+							<reportElement uuid="25583327-f216-492f-beca-53ee5e348d9b" positionType="Float" x="23" y="1" width="190" height="12"/>
+							<textElement>
+								<font size="8" isItalic="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<ellipse>
+							<reportElement uuid="183ba38b-eb26-4ca0-9100-bbb7adfb7f32" positionType="Float" x="1" y="1" width="14" height="12"/>
+						</ellipse>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="c5145edb-ce4a-4071-b4a8-b0b867ca878a" positionType="Float" x="5" y="62" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Género:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="750893c0-be80-45cb-8eff-5ea157e9a0b7" positionType="Float" x="305" y="62" width="100" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Edad:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="62c8bc69-3a53-4b4b-817c-9a3c2e380ea2" positionType="Float" x="335" y="73" width="237" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<componentElement>
+				<reportElement uuid="0d738bd5-3c21-4f39-b8dc-9aaf73fd8229" positionType="Float" x="43" y="88" width="214" height="13"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="89255aad-1606-4dd0-a966-bc465374665c">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource((java.util.List)$P{actores})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="214">
+						<textField>
+							<reportElement uuid="07711d2d-e3d4-4574-b5ec-259f97e29fca" positionType="Float" x="23" y="1" width="190" height="12"/>
+							<textElement>
+								<font size="8" isItalic="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<ellipse>
+							<reportElement uuid="3e67dd5c-c09d-4472-86c1-f44f2865c48f" positionType="Float" x="1" y="1" width="14" height="12"/>
+						</ellipse>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="b6ad5e71-b31c-48a4-baf1-baaab30a19c2" positionType="Float" x="7" y="88" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Actor:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="62c8bc69-3a53-4b4b-817c-9a3c2e380ea2" positionType="Float" x="136" y="127" width="440" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="a034cc55-262a-4268-83e8-bbcb6e191bb4" positionType="Float" x="7" y="115" width="235" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál actor? (Si eligió otro):]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="9f0e2d35-1f6b-41ed-8905-21fe1decacac" positionType="Float" x="159" y="135" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="179" y="147" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FRENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="750893c0-be80-45cb-8eff-5ea157e9a0b7" positionType="Float" x="6" y="135" width="153" height="50"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Actor pertenece a un (Sólo si actor es diferente de Persona civil):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ccf67aca-aacc-4c42-bcb5-38a917fcec5a" positionType="Float" x="179" y="135" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[BLOQUE]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="159" y="147" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="159" y="159" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="179" y="159" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[UNIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a6c1c26-8940-4792-bf77-fa816378ab90" positionType="Float" x="179" y="172" width="81" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OTRO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="239f8f62-c404-41ce-a9df-962f29580f49" positionType="Float" x="159" y="172" width="14" height="12"/>
+			</ellipse>
+			<line>
+				<reportElement uuid="62c8bc69-3a53-4b4b-817c-9a3c2e380ea2" positionType="Float" x="104" y="201" width="465" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="a034cc55-262a-4268-83e8-bbcb6e191bb4" positionType="Float" x="0" y="189" width="235" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ?(Si eligió otra):]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

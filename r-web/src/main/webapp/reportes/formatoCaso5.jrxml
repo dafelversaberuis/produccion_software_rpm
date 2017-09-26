@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a521d61-f03b-4891-ae30-fdc8b48c7859">
+	<property name="ireport.zoom" value="1.650000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="3ddd52cc-63ed-4bdb-a9ac-aed3322b93cc">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tiposDocumento" class="java.util.List"/>
+	<parameter name="generos" class="java.util.List"/>
+	<parameter name="etnias" class="java.util.List"/>
+	<parameter name="estadosCiviles" class="java.util.List"/>
+	<parameter name="nivelesEducativos" class="java.util.List"/>
+	<parameter name="ocupaciones" class="java.util.List"/>
+	<parameter name="organizaciones" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="487" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3ffbf045-c54c-4e65-8ca5-5348818d8fa8" x="305" y="6" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="fa92a71b-0884-4402-bfba-9e33ee52b319" x="352" y="17" width="222" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="cbe92596-9c3b-442a-97dc-fd608bf1b0df" positionType="Float" x="305" y="20" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Municipio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b762912e-bfd1-4545-95d6-5621df1ddf7a" positionType="Float" x="1" y="20" width="290" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Departamento:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="357" y="31" width="216" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="36b12000-8dc2-4e21-b65d-ac4b00827341" positionType="Float" x="67" y="30" width="229" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="09b5b517-c7f6-431a-9cba-962a63025d0c" positionType="Float" x="162" y="16" width="135" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="2" y="6" width="196" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Fecha de los hechos(año-mes-día):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="c7a93dc0-ae54-484a-ada1-db73bd6db737" positionType="Float" x="180" y="235" width="390" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="2" y="33" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Lugar de los hechos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c6a7fc8-923d-45d8-8c74-c5eefb831628" positionType="Float" x="306" y="33" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál lugar ?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="55cc7724-0cce-4595-aaf8-5ea762a6aa58" positionType="Float" x="6" y="312" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tipo de hecho:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="23af4b2e-4363-4303-909a-99c2a479029a" positionType="Float" x="310" y="312" width="126" height="41"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Frecuencia de los hechos (Si eligió que se ha repetido):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="926f0061-72e8-412f-8549-02e379f3c9a5" positionType="Float" x="311" y="240" width="117" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál documentación ?:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="61" y="190" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="81" y="190" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="61" y="202" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="81" y="202" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="456" y="252" width="89" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FILMACIONES]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="436" y="240" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="456" y="264" width="100" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NOTAS DE PRENSA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9ce66db-4b0c-4e20-9a87-b1f82215ba2b" positionType="Float" x="456" y="240" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FOTOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d20ca4e-ed95-4bbd-9562-5ecc2ae27100" positionType="Float" x="436" y="264" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="436" y="252" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="35291d8c-fdce-4bbc-803f-621cc087b875" positionType="Float" x="456" y="276" width="100" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OTRA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="436" y="276" width="14" height="12"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="9a5ea3fa-b8cd-46ff-8b73-1fadd2d0fa65" positionType="Float" x="198" y="10" width="7" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="e67b5a87-b3f0-4e74-83c4-72262944bda9" positionType="Float" x="237" y="10" width="7" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="963f5578-0e01-4245-8957-14f41814fb07" positionType="Float" x="436" y="299" width="138" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="361" y="44" width="210" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="87" y="44" width="213" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="403" y="56" width="168" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="3c6a7fc8-923d-45d8-8c74-c5eefb831628" positionType="Float" x="306" y="45" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Resguardo (opcional)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="2" y="45" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Comunidad (opcional):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="99" y="54" width="200" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="2" y="58" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Vereda y/o corregimiento (opcional):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="152" y="67" width="147" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="2" y="71" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Relato de los hechos:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="1" y="94" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="3" y="106" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="2" y="119" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="2" y="142" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="2" y="154" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="3" y="130" width="566" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="3c6a7fc8-923d-45d8-8c74-c5eefb831628" positionType="Float" x="2" y="224" width="205" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Quién/Quienes? (Si eligió SI - es Opcional):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="3" y="190" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Hay testigos:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="154" y="240" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="174" y="240" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="174" y="252" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="154" y="252" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="4" y="240" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tiene documentación de los hechos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3c6a7fc8-923d-45d8-8c74-c5eefb831628" positionType="Float" x="311" y="288" width="145" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál otra documentación ? ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="89" y="324" width="157" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[HECHO QUE SE HA REPETIDO]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="69" y="324" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="69" y="312" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="89" y="312" width="157" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[HECHO AISLADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="324" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TODOS LOS DÍAS]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="324" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="441" y="312" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="461" y="312" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DE VEZ EN CUANDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="337" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TODAS LAS SEMANAS]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="337" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="350" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CADA 15 DÍAS]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="350" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="362" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TODOS LOS MESES]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="362" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="374" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CADA 3 MESES]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="374" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="386" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="386" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CADA SEIS MESES]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="441" y="398" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="461" y="398" width="112" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[TODOS LOS AÑOS]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

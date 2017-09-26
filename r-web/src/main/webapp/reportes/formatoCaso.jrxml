@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="2f78ee13-d4ba-4216-bd1b-0f8602409090">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tiposDocumento" class="java.util.List"/>
+	<parameter name="generos" class="java.util.List"/>
+	<parameter name="etnias" class="java.util.List"/>
+	<parameter name="estadosCiviles" class="java.util.List"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\workspace\\fundacion_RUTA\\WebContent\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nivelesEducativos" class="java.util.List"/>
+	<parameter name="ocupaciones" class="java.util.List"/>
+	<parameter name="organizaciones" class="java.util.List"/>
+	<parameter name="amenazas" class="java.util.List"/>
+	<parameter name="delitos" class="java.util.List"/>
+	<parameter name="libertades" class="java.util.List"/>
+	<parameter name="individuales" class="java.util.List"/>
+	<parameter name="colectivos" class="java.util.List"/>
+	<parameter name="familiares" class="java.util.List"/>
+	<parameter name="actores" class="java.util.List"/>
+	<parameter name="generos2" class="java.util.List"/>
+	<parameter name="logo2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="88" splitType="Stretch">
+			<image onErrorType="Blank">
+				<reportElement uuid="1fc46542-b805-4e29-ae22-b9d69095c856" x="2" y="0" width="122" height="73"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="8008bdaf-15af-44d4-84eb-39294a703eea" x="93" y="10" width="439" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUTA PACÍFICA DE LAS MUJERES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5dbd94f-83b1-43c6-9267-656194c2aa69" x="93" y="45" width="439" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Registro y Documentación de violaciones a derechos de las mujeres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad9432b5-2316-48e1-bad8-60bd2786e3f7" x="93" y="27" width="439" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Muasoft - Software de apoyo para la dmón de DDHH mujeres Afrocolombianas]]></text>
+			</staticText>
+			<image onErrorType="Blank">
+				<reportElement uuid="1fc46542-b805-4e29-ae22-b9d69095c856" x="452" y="14" width="118" height="66"/>
+				<imageExpression><![CDATA[$P{logo2}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="23">
+			<textField>
+				<reportElement uuid="28b484ea-8a9a-4d48-ad41-b3b7a2580b01" x="452" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Pag. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="5f2ec680-0048-413e-8b94-c66fde31b240" x="532" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d5260d6b-dc6d-4fb1-8d13-ec0f0dc59445" x="20" y="1" width="291" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[= Significa que de todas las opciones puede elegir solo una de ellas]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="5b3561ca-032a-4edb-aa03-1ccd55d106d3" positionType="Float" x="6" y="3" width="7" height="6"/>
+			</ellipse>
+			<rectangle>
+				<reportElement uuid="b83374c1-2cb5-4871-9c84-87af180ddf4d" positionType="Float" x="6" y="12" width="7" height="6"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="258d1528-4580-4545-a6ae-0177bf8f0c37" x="20" y="10" width="291" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[= Significa que de todas las opciones puede elegir cualuiera o muchas de ellas]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="06bacddb-0e96-4aca-8f41-1ad72775e67c" x="0" y="0" width="572" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="435">
+			<staticText>
+				<reportElement uuid="eaf9b561-6d8f-4a1b-b986-6f839b4343a6" x="0" y="3" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMACIÓN SOCIODEMOGRÁFICA]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="d94268a6-7ffa-4f9b-a719-9777ec7b0a01" x="0" y="18" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="73cad050-a6a2-4075-9691-2455679fadeb" x="0" y="0" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="837f7534-9102-430d-8800-ce19a5e9e01e" x="0" y="23" width="572" height="8"/>
+				<subreportParameter name="logo"/>
+				<subreportParameter name="etnias">
+					<subreportParameterExpression><![CDATA[$P{etnias}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ocupaciones">
+					<subreportParameterExpression><![CDATA[$P{ocupaciones}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="generos">
+					<subreportParameterExpression><![CDATA[$P{generos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="organizaciones">
+					<subreportParameterExpression><![CDATA[$P{organizaciones}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nivelesEducativos">
+					<subreportParameterExpression><![CDATA[$P{nivelesEducativos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="estadosCiviles">
+					<subreportParameterExpression><![CDATA[$P{estadosCiviles}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tiposDocumento">
+					<subreportParameterExpression><![CDATA[$P{tiposDocumento}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="2" y="58" width="572" height="8"/>
+				<subreportParameter name="logo"/>
+				<subreportParameter name="libertades">
+					<subreportParameterExpression><![CDATA[$P{libertades}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="delitos">
+					<subreportParameterExpression><![CDATA[$P{delitos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="etnias">
+					<subreportParameterExpression><![CDATA[$P{etnias}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ocupaciones">
+					<subreportParameterExpression><![CDATA[$P{ocupaciones}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="generos">
+					<subreportParameterExpression><![CDATA[$P{generos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="nivelesEducativos">
+					<subreportParameterExpression><![CDATA[$P{nivelesEducativos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="organizaciones">
+					<subreportParameterExpression><![CDATA[$P{organizaciones}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="estadosCiviles">
+					<subreportParameterExpression><![CDATA[$P{estadosCiviles}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="amenazas">
+					<subreportParameterExpression><![CDATA[$P{amenazas}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tiposDocumento">
+					<subreportParameterExpression><![CDATA[$P{tiposDocumento}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso2.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="2" y="53" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="2" y="35" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="2" y="38" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMACIÓN DE LOS HECHOS VICTIMIZANTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="1" y="122" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFORMACIÓN DEL IMPACTO PSICOSOCIAL]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="1" y="114" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="1" y="137" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="0" y="148" width="572" height="8"/>
+				<subreportParameter name="colectivos">
+					<subreportParameterExpression><![CDATA[$P{colectivos}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="familiares">
+					<subreportParameterExpression><![CDATA[$P{familiares}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="individuales">
+					<subreportParameterExpression><![CDATA[$P{individuales}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso3.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="0" y="172" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL AGRESOR O AGRESORES]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="0" y="164" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="0" y="187" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="-1" y="198" width="572" height="8"/>
+				<subreportParameter name="generos2">
+					<subreportParameterExpression><![CDATA[$P{generos2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="actores">
+					<subreportParameterExpression><![CDATA[$P{actores}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso4.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="2" y="212" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="2" y="235" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="2" y="220" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN DE LOS HECHOS]]></text>
+			</staticText>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="1" y="246" width="572" height="8"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso5.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="2" y="285" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="2" y="290" width="244" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROTECCIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="2" y="308" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="1" y="319" width="572" height="8"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso6.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="-1" y="361" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="-2" y="367" width="572" height="8"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso7.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="-1" y="343" width="571" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACCESO A LA JUSTICIA/IMPLEMENTACIÓN DE LAS RUTAS DE ATENCIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="-1" y="338" width="572" height="1"/>
+			</line>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="-2" y="380" width="572" height="8"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso8.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement uuid="573d189c-9adb-4d92-9e5b-ce955328570a" positionType="Float" x="0" y="423" width="572" height="8"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "formatoCaso9.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="99e47f47-a86d-4fee-be1c-606436ddc331" positionType="Float" x="1" y="417" width="572" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="a8443a0a-ed57-49c0-b49e-c2eb30f88192" positionType="Float" x="1" y="394" width="572" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="88c8a1bd-763a-4341-8a00-74b9dabb7348" positionType="Float" x="1" y="399" width="571" height="20"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACOMPAÑAMIENTO PSICOSOCIAL]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a521d61-f03b-4891-ae30-fdc8b48c7859">
+	<property name="ireport.zoom" value="1.650000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="3ddd52cc-63ed-4bdb-a9ac-aed3322b93cc">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tiposDocumento" class="java.util.List"/>
+	<parameter name="generos" class="java.util.List"/>
+	<parameter name="etnias" class="java.util.List"/>
+	<parameter name="estadosCiviles" class="java.util.List"/>
+	<parameter name="nivelesEducativos" class="java.util.List"/>
+	<parameter name="ocupaciones" class="java.util.List"/>
+	<parameter name="organizaciones" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="364" splitType="Stretch">
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="127" y="192" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="127" y="180" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="1" y="180" width="131" height="24"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Impacto del acompañamiento psicosocial:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="145" y="192" width="145" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LA MUJER SIGUE IGUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="145" y="180" width="145" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LA MUJER ESTÁ MEJOR]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="297" y="232" width="263" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="1" y="222" width="187" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Se logra restablecimiento de sus derechos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="208" y="222" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="265" y="222" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Razón:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="191" y="234" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="191" y="220" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="208" y="234" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f2ca6955-50b7-47c5-bdd5-9e784f33f232" positionType="Float" x="0" y="36" width="290" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Departamento atención:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f3f7220d-5da8-4ff5-b6f3-018a072b4c4d" positionType="Float" x="113" y="46" width="182" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="2075fcc5-349b-43e1-9bb4-cabea1b6cb1c" positionType="Float" x="297" y="36" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Municipio denuncia:]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="e303c2c8-aa8c-46c4-af18-793440dc0d63" positionType="Float" x="385" y="47" width="187" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="a9ce66db-4b0c-4e20-9a87-b1f82215ba2b" positionType="Float" x="168" y="287" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PERSONERÍA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="148" y="311" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="169" y="299" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[UNIDAD DE VÍCTIMAS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="148" y="287" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="35291d8c-fdce-4bbc-803f-621cc087b875" positionType="Float" x="168" y="275" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DEFENSORÍA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="148" y="299" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="148" y="275" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="168" y="251" width="395" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FISCALÍA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="169" y="323" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[UNIDAD DE VÍCTIMAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="168" y="263" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[POLICÍA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="148" y="251" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2d20ca4e-ed95-4bbd-9562-5ecc2ae27100" positionType="Float" x="148" y="263" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="926f0061-72e8-412f-8549-02e379f3c9a5" positionType="Float" x="1" y="249" width="144" height="26"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿A través de cuál institución activó la ruta de atención ?:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="169" y="311" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[COMISARÍA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="148" y="323" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="169" y="335" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OTRA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="148" y="335" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="148" y="348" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ? (Si eligió otra):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="252" y="357" width="305" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement uuid="4e76a783-f1b7-48a8-a2d3-718ad957843f" positionType="Float" x="530" y="25" width="7" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="e5f0859e-5d41-4744-a9a7-65af51be149e" positionType="Float" x="491" y="25" width="7" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="c2b697f8-3966-4bfa-8a50-8f2551831aa5" positionType="Float" x="455" y="31" width="113" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="86a04137-cf00-40ee-9753-d86fa469b2c8" positionType="Float" x="295" y="22" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Fecha de la atención (año-mes-día):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="144" y="204" width="145" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LA MUJER EMPEORÓ]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="127" y="204" width="14" height="12"/>
+			</ellipse>
+			<line>
+				<reportElement uuid="f3f7220d-5da8-4ff5-b6f3-018a072b4c4d" positionType="Float" x="273" y="14" width="38" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="f2ca6955-50b7-47c5-bdd5-9e784f33f232" positionType="Float" x="0" y="4" width="277" height="27"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[No. atención (El sistema la arroja automáticamente en el software):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f3f7220d-5da8-4ff5-b6f3-018a072b4c4d" positionType="Float" x="132" y="31" width="158" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="f2ca6955-50b7-47c5-bdd5-9e784f33f232" positionType="Float" x="0" y="22" width="290" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Persona que realiza la atención:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="105" y="108" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ASESORÍA JURÍDICA SOBRE LAS RUTAS DE ATENCIÓN]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="84" y="96" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="35291d8c-fdce-4bbc-803f-621cc087b875" positionType="Float" x="104" y="84" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[MANEJO DE SENTIMIENTOS DE ANGUSTIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="104" y="72" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SOLUCIÓN DE PROBLEMAS DE MOMENTO ACTUAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="84" y="120" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="84" y="84" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="105" y="120" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ACOMPAÑAMIENTO A INSTITUCIONES PARA RESTABLECIMIENTO DE LOS DERECHOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="926f0061-72e8-412f-8549-02e379f3c9a5" positionType="Float" x="1" y="60" width="161" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tipo de atención:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="104" y="60" width="395" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ATENCIÓN DE CRISIS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="84" y="108" width="14" height="12"/>
+			</rectangle>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="263" y="160" width="223" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="84" y="132" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="105" y="132" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[REMISIÓN A OTRA INSTANCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="84" y="149" width="385" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ? (Si eligió remisión a otra instancia):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9ce66db-4b0c-4e20-9a87-b1f82215ba2b" positionType="Float" x="103" y="96" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ORIENTACIÓN PARA TOMA DE DECISIONES]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="84" y="60" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2d20ca4e-ed95-4bbd-9562-5ecc2ae27100" positionType="Float" x="84" y="72" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="358" y="196" width="145" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO ES INCLUIDA EN LAS RUTAS DE ATENCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="358" y="184" width="217" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[LA MUJER ES INCLUIDA EN LAS RUTAS DE ATENCIÓN]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="340" y="184" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="265" y="180" width="106" height="36"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Impacto del acompañamiento psicosocial:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="340" y="196" width="14" height="12"/>
+			</ellipse>
+		</band>
+	</summary>
+</jasperReport>

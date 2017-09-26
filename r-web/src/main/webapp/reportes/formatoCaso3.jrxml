@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="188af191-5738-437d-9ea2-0fcf4fa274b9">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="bd70f5c9-ef8c-4a0c-bd92-e4166567eff1">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="individuales" class="java.util.List"/>
+	<parameter name="colectivos" class="java.util.List"/>
+	<parameter name="familiares" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="151" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b48a8097-bd3f-4e42-935d-344011780b9f" positionType="Float" x="3" y="9" width="174" height="28"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Impactos individuales:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="ed3ac5b9-26cc-4ae1-84f3-c221e9d588e5" positionType="Float" x="144" y="9" width="152" height="13"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="5ae87981-2e61-4018-9d85-7b3cf0c643e5">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource((java.util.List)$P{individuales})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="152">
+						<textField>
+							<reportElement uuid="d8c71ba2-07c1-4dfb-93fc-ee0388dabe7d" positionType="Float" x="19" y="1" width="133" height="12"/>
+							<textElement>
+								<font size="8" isItalic="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<rectangle>
+							<reportElement uuid="45c1f578-a0ca-497a-9df9-5a351029edfb" positionType="Float" x="4" y="1" width="14" height="12"/>
+						</rectangle>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="975ac4b2-c443-427c-a9ce-1f00ba0ea52d" positionType="Float" x="302" y="8" width="107" height="38"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Impactos familiares:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="438bec43-c899-402c-a246-a91da7cef238" positionType="Float" x="404" y="9" width="168" height="13"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="17073684-ac8e-4530-a22c-357694f8aa25">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource((java.util.List)$P{familiares})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="168">
+						<textField>
+							<reportElement uuid="6f3e2f8a-2a68-4c57-b8bd-f48a882d7bae" positionType="Float" x="20" y="1" width="133" height="12"/>
+							<textElement>
+								<font size="8" isItalic="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<rectangle>
+							<reportElement uuid="e4425829-a575-424c-9b6c-c1c2f733e6cb" positionType="Float" x="3" y="1" width="14" height="12"/>
+						</rectangle>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="99a6eb97-bb36-4c65-86eb-ac94a6c94b49" positionType="Float" x="3" y="95" width="276" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ? (Si eligió otro):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="ad3aa913-9937-4731-aca4-ff8ab0e224a0" positionType="Float" x="131" y="106" width="168" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="7ee5cebd-7c9f-490f-ba71-1700e2faed5a" positionType="Float" x="3" y="71" width="129" height="24"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Impactos colectivos / organizativos:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement uuid="e71e3a2e-6c91-4827-83be-7bb64d1a09e7" positionType="Float" x="144" y="73" width="260" height="13"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="dataset1" uuid="e3ac92e3-ce7a-46d6-a2b0-59e8cd6b9c83">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource((java.util.List)$P{colectivos})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="13" width="260">
+						<textField>
+							<reportElement uuid="77e552ac-c29e-47f1-834c-c358d639acbb" positionType="Float" x="21" y="0" width="213" height="12"/>
+							<textElement>
+								<font size="8" isItalic="true"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+						</textField>
+						<rectangle>
+							<reportElement uuid="74a009fe-a42f-41d6-94d2-fea942c83965" positionType="Float" x="4" y="0" width="14" height="12"/>
+						</rectangle>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="99a6eb97-bb36-4c65-86eb-ac94a6c94b49" positionType="Float" x="3" y="42" width="276" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ? (Si eligió otro):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="ad3aa913-9937-4731-aca4-ff8ab0e224a0" positionType="Float" x="128" y="53" width="168" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

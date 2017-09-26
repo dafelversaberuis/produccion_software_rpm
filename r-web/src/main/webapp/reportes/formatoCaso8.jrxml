@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formatoCaso" language="groovy" pageWidth="572" pageHeight="752" columnWidth="572" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a521d61-f03b-4891-ae30-fdc8b48c7859">
+	<property name="ireport.zoom" value="1.650000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="3ddd52cc-63ed-4bdb-a9ac-aed3322b93cc">
+		<field name="nombre" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="tiposDocumento" class="java.util.List"/>
+	<parameter name="generos" class="java.util.List"/>
+	<parameter name="etnias" class="java.util.List"/>
+	<parameter name="estadosCiviles" class="java.util.List"/>
+	<parameter name="nivelesEducativos" class="java.util.List"/>
+	<parameter name="ocupaciones" class="java.util.List"/>
+	<parameter name="organizaciones" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="156" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b762912e-bfd1-4545-95d6-5621df1ddf7a" positionType="Float" x="1" y="5" width="290" height="12"/>
+				<textElement>
+					<font size="9" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[**Si los hechos NO fueron denunciados responda:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c0d9a6ed-c256-4f09-9d65-3e1003c23b0e" positionType="Float" x="157" y="110" width="174" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Cuál ? (Si eligió otra):]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="8176cfcb-746e-41c8-b420-8970c2404fe4" positionType="Float" x="261" y="119" width="305" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1175d150-196d-4f0e-acb8-febae2973f24" positionType="Float" x="10" y="127" width="310" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿ La víctima está interesada en denunciar los hechos ?:]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement uuid="20bfe85d-7bfa-4b75-b59a-fa417c766dae" positionType="Float" x="248" y="141" width="14" height="12"/>
+			</ellipse>
+			<ellipse>
+				<reportElement uuid="de47bcf3-5dc6-4084-908a-0e9b49e5b86f" positionType="Float" x="248" y="129" width="14" height="12"/>
+			</ellipse>
+			<staticText>
+				<reportElement uuid="77dc078c-b65d-46e3-a283-d9bb35f6b5c5" positionType="Float" x="268" y="129" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20fcef30-4784-4a19-b4b1-1759de8a22b3" positionType="Float" x="268" y="141" width="52" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="157" y="23" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="35291d8c-fdce-4bbc-803f-621cc087b875" positionType="Float" x="177" y="59" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PREVENCIÓN DE HABLADURÍAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a9ce66db-4b0c-4e20-9a87-b1f82215ba2b" positionType="Float" x="177" y="23" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[MIEDO A POSIBLES RETALIACIONES POR EL AGRESOR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="157" y="35" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="926f0061-72e8-412f-8549-02e379f3c9a5" positionType="Float" x="10" y="23" width="161" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[¿Por qué no denunció los hechos ?:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="177" y="35" width="395" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NO CONSIDERA QUE LOS HECHOS VIOLENTOS SEAN UNA VIOLACIÓN A SUS DERECHOS HUMANOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d20ca4e-ed95-4bbd-9562-5ecc2ae27100" positionType="Float" x="157" y="47" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="177" y="47" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[VERGÜENZA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="2d90fe86-8654-4808-beed-7e8fd0f383bc" positionType="Float" x="157" y="59" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="343f7f3b-549c-47bc-a7f1-a8c0fbbe5a1b" positionType="Float" x="157" y="71" width="14" height="12"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a9ce66db-4b0c-4e20-9a87-b1f82215ba2b" positionType="Float" x="177" y="71" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[DESCONOCIMIENTO DE DONDE DENUNCIAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="db6d9749-12d1-405e-a711-5ba97c7d9643" positionType="Float" x="177" y="83" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[FALTA DE CREDIBILIDAD EN AUTORIDADES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9943abf9-d28f-41d2-817f-e3aeb58a8874" positionType="Float" x="177" y="95" width="389" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OTRA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9ea836c0-1e96-4260-921c-3c92ba9888bc" positionType="Float" x="157" y="83" width="14" height="12"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2d20ca4e-ed95-4bbd-9562-5ecc2ae27100" positionType="Float" x="157" y="95" width="14" height="12"/>
+			</rectangle>
+		</band>
+	</summary>
+</jasperReport>
