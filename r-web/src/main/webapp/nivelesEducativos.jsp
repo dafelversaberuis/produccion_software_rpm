@@ -147,7 +147,7 @@
 		<a href="" id="responsive-menu-button"><i class="fa fa-bars"></i></a>
 		<nav class="menu" style="display: block;">
 		
-		<%@include file="menu.html" %>
+		<%@include file="menu4.html" %>
 		</nav>
 		<!--END MENU-->
 		<p><%=bUsuario.getPrimerNombre().trim() + " " + bUsuario.getSegundoNombre().trim() + " " + bUsuario.getPrimerApellido().trim() + " " + bUsuario.getSegundoApellido().trim()%><a
@@ -184,9 +184,12 @@
 
 
 
+<!-- 
 <input
 									type="button" value=" REGRESAR " onclick="document.form1.action='mujeres.jsp?variable_regreso=<%=curso%>'; document.form1.submit(); " />
-	    </center>
+-->
+
+<input	type="button" value=" REGRESAR A MUJERES " onclick="window.close()" />	    </center>
 
 <br/><br/><br/><br/>
 

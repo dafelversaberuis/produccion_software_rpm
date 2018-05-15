@@ -50,12 +50,12 @@ if(variable_regreso!=null && variable_regreso.equals("null")){
 }
 
 if(variable_regreso!=null){
-	
+	/*
 	n=null;
 	a=null;
-	d=null;
+	d=null;*/
 }
-
+variable_regreso = null;
 
 //out.println(n+"*"+a+"*"+d+"*"+variable_regreso);
 
@@ -99,9 +99,9 @@ List<Object[]> mujeres =bAdministrarPublicaciones.getMujeresS(n,a,d,variable_reg
 		</td>
 		<td align="left" bgcolor="<%=color %>" ><font color="black" ><%=i[4] %></font></td>
 		  
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Niveles educativos: </b>Todos los niveles de estudio que tiene la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="nivelesEducativos.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/n_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Ocupaciones actuales: </b>Actualmente en que está desempeñada la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="actividadesEconomicas.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/o_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>		
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Organizaciones pertenecientes: </b>A que organizacione pertenece o ha pertenecido la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="participaciones.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/p_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Niveles educativos: </b>Todos los niveles de estudio que tiene la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="nivelesEducativos.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/n_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Ocupaciones actuales: </b>Actualmente en que está desempeñada la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="actividadesEconomicas.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/o_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>		
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Organizaciones pertenecientes: </b>A que organizacione pertenece o ha pertenecido la mujer', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="participaciones.jsp?id=<%=i[0]%>&nc=<%=i[1] + " " + i[2]  %>"><img src="imagenes/p_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
 		
 		<td align="center" bgcolor="<%=color %>" "><a href="#" onclick="window.open('/r-web/editarInformacionMujer.jsp?id=<%=i[0]%>', 'popup', 'toolbar=no, menubar=no, scrollbars=no, resizable=no, width=970, height=650'); return false;" style="text-decoration:none">Ver / Editar</a></td>
 		<td align="center" bgcolor="<%=color %>" ><a href="#" onclick="cargarEliminarMujer('<%=i[0] %>'); return false;">Eliminar</a></td>

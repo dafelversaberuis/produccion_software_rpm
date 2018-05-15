@@ -172,12 +172,16 @@
 
 
 	    <center>
-	    <table border="0" width="100%" cellpadding="2">
+	   
+					
+					
+	  	  <table border="1" style="width:100%"><tr><th>Criterios sólo de consulta(cruce campos, presione consultar y será más especifico lo buscado)</th><tr><td>
+	    	       <table border="0" width="100%" cellpadding="2">
 				<tr>
 
-					<td>Nombres :</td>
+					<td>Nombres o parte de éstos:</td>
 					<td><input id="nombres" name="nombres" type="text" value="" /></td>
-					<td>Apellidos:</td>
+					<td>Apellidos o parte de éstos:</td>
 					<td><input id="apellidos" name="apellidos" type="text" value="" /></td>
 
 
@@ -190,10 +194,13 @@
 					<td></td>
 				</tr>
 			</table>
-	    	
-	    	    <br/>
-	    	<input
-									type="button" value=" Consultar " onclick="document.getElementById('variable_regreso').value=''; cargarMujeres()" />
+			
+			</td></tr></table>
+	    	      	<input
+									type="button" value=" Consultar " onclick="cargarMujeres()" />
+
+							
+									
 	    <br/>
 	        <br/>
 	    <span id="detalleProcesos"></span>
@@ -207,13 +214,14 @@
 	String variableRegreso = request.getParameter("variable_regreso");
 %>
 	<input name="variable_regreso" id="variable_regreso" type="hidden" 
-	value="<%=variableRegreso%>" />
+	value="" />
 	
 	<%
 
 	if(variableRegreso==null){
 		variableRegreso = "";
-	}else{
+	}
+	//else{
 		%>
 		
 		<script>
@@ -224,7 +232,7 @@
 		<%
 		
 		
-	}
+	//}
 	
 	%>
 	

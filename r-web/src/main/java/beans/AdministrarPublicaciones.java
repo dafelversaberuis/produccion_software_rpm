@@ -3955,18 +3955,115 @@ public class AdministrarPublicaciones {
 			String fecha_hechos, String fecha_hechos2, String responsable,
 			String numero_atencion, String fecha_atencion,
 			String fecha_atencion2, String departamento_hechos,
-			String municipio_hechos) {
+			String municipio_hechos,
+			String amenazas,
+			String delitos,
+			String libertades,
+			String impactosIndividuales,
+			String impactosColectivos,
+			String conocido,
+			String sexo,
+			String genero,
+			String edad,
+			String tipo_actor,
+			String vereda,
+			String testigos,
+			String documentacion,
+			String tipo_hecho,
+			String riesgo,
+			String medida,
+			String proteccion,
+			String denuncia,
+			String victima,
+			String donde,
+			String tipoAtencion,
+			String impacto,
+			String restablecimiento,
+			String donde2){
+		
+		
+		
+		
 
 		Conexion conexion = new Conexion();
 		String sentencia = "SELECT DISTINCT c.*, m.nombres, m.apellidos, m.documento FROM casos c INNER JOIN mujeres m  ON c.id_mujer = m.id_mujer ";
 
 		// variables from
+		
+		
+		
+		if (amenazas != null && !amenazas.trim().equals("")) {
+					sentencia += " INNER JOIN amenazas_casos ac ON c.id = ac.id_caso ";
+		}
+		
+		if (delitos != null && !delitos.trim().equals("")) {
+			sentencia += " INNER JOIN delitos_casos dc ON c.id = dc.id_caso ";
+		}
+		
+		if (libertades != null && !libertades.trim().equals("")) {
+			sentencia += " INNER JOIN libertades_casos lc ON c.id = lc.id_caso ";
+		}
+		
+			
+		if (impactosIndividuales != null && !impactosIndividuales.trim().equals("")) {
+			sentencia += " INNER JOIN individuales_casos ic ON c.id = ic.id_caso ";
+		}
+		
+		if (impactosColectivos != null && !impactosColectivos.trim().equals("")) {
+			sentencia += " INNER JOIN colectivos_casos cc ON c.id = cc.id_caso ";
+		}
+	
+		
+		
+		if ((riesgo != null && !riesgo.trim().equals(""))
+				|| (medida != null && !medida.trim().equals(
+						""))
+				|| (proteccion != null && !proteccion.trim().equals(""))
+			
 
-		if (actor != null && !actor.trim().equals("")) {
+		) {
+			sentencia += " INNER JOIN protecciones prt ON c.id = prt.id_caso ";
+		}
+		
+		
+		
+		
+		
+		
+
+		if( (actor != null && !actor.trim().equals(""))
+		
+		||
+		(conocido != null && !conocido.trim().equals(""))
+				||
+				(sexo != null && !sexo.trim().equals(""))
+						||
+						(genero != null && !genero.trim().equals(""))
+								||
+								(edad != null && !edad.trim().equals(""))
+										||
+										(tipo_actor != null && !tipo_actor.trim().equals(""))
+		
+		
+		)
+		{
 			sentencia += " INNER JOIN agresores g ON c.id = g.id_caso ";
 		}
 
-		if (hecho_denunciado != null && !hecho_denunciado.trim().equals("")) {
+		if ((hecho_denunciado != null && !hecho_denunciado.trim().equals(""))
+				
+				||
+				(denuncia != null && !denuncia.trim().equals(""))
+				
+				||
+				(victima != null && !victima.trim().equals(""))
+				
+				||
+				(donde != null && !donde.trim().equals(""))
+				
+				
+				
+				) {
 			sentencia += " INNER JOIN rutas_atencion r ON c.id = r.id_caso ";
 		}
 
@@ -3974,7 +4071,17 @@ public class AdministrarPublicaciones {
 		int entroHechos = 0;
 		if ((fecha_hechos != null && !fecha_hechos.trim().equals(""))
 				|| (fecha_hechos2 != null && !fecha_hechos2.trim().equals(""))
-
+				
+				||
+				(vereda != null && !vereda.trim().equals(""))
+				||
+				(testigos != null && !testigos.trim().equals(""))
+				||
+				(documentacion != null && !documentacion.trim().equals(""))
+				||
+				(tipo_hecho != null && !tipo_hecho.trim().equals(""))
+				
+		
 		) {
 			entroHechos = 1;
 			sentencia += " INNER JOIN hechos h ON c.id = h.id_caso ";
@@ -4006,6 +4113,14 @@ public class AdministrarPublicaciones {
 				|| (fecha_atencion != null && !fecha_atencion.trim().equals(""))
 				|| (fecha_atencion2 != null && !fecha_atencion2.trim().equals(
 						""))
+				
+				
+				
+				|| (tipoAtencion != null && !tipoAtencion.trim().equals(""))
+				|| (impacto != null && !impacto.trim().equals(""))
+				|| (restablecimiento != null && !restablecimiento.trim().equals(""))
+				|| (donde2 != null && !donde2.trim().equals(""))
+				
 
 		) {
 
@@ -4052,7 +4167,7 @@ public class AdministrarPublicaciones {
 		}
 
 		if (actor != null && !actor.trim().equals("")) {
-			sentencia += " AND g.tipo_actor =  '" + actor + "'";
+			sentencia += " AND g.id_actor =  '" + actor + "'";
 		}
 
 		if (hecho_denunciado != null && !hecho_denunciado.trim().equals("")) {
@@ -4074,18 +4189,127 @@ public class AdministrarPublicaciones {
 					+ n.toUpperCase().trim() + "%'";
 
 		}
-		if (a != null & !a.trim().equals("")) {
+		if (a != null &&  !a.trim().equals("")) {
 
 			sentencia += " AND UPPER(m.apellidos) LIKE '%"
 					+ a.toUpperCase().trim() + "%'";
 
 		}
 
-		if (d != null & !d.trim().equals("")) {
+		if (d != null &&  !d.trim().equals("")) {
 
 			sentencia += " AND m.documento = " + d;
 
 		}
+		
+		
+		
+		
+		
+		if (amenazas != null &&  !amenazas.trim().equals("")) {
+			sentencia += " AND ac.id_amenaza = " + amenazas;
+		}
+		if (delitos != null &&  !delitos.trim().equals("")) {
+			sentencia += " AND dc.id_delito = " + delitos;
+		}
+		
+		if (libertades != null &&  !libertades.trim().equals("")) {
+			sentencia += " AND lc.id_libertad = " + libertades;
+		}
+		
+		if (impactosIndividuales != null &&  !impactosIndividuales.trim().equals("")) {
+			sentencia += " AND ic.id_individual = " + impactosIndividuales;
+		}
+		
+		
+		if (impactosColectivos != null &&  !impactosColectivos.trim().equals("")) {
+			sentencia += " AND cc.id_colectivo = " + impactosColectivos;
+		}
+		
+		if (conocido != null &&  !conocido.trim().equals("")) {
+			sentencia += " AND g.conocido = '" + conocido+"'";
+		}
+		
+		if (sexo != null &&  !sexo.trim().equals("")) {
+			sentencia += " AND g.sexo = '" + sexo+"'";
+		}
+		if (genero != null &&  !genero.trim().equals("")) {
+			sentencia += " AND g.id_genero = '" + genero+"'";
+		}
+		
+		if (edad != null &&  !edad.trim().equals("")) {
+			sentencia += " AND g.edad = '" + edad+"'";
+		}
+		
+		if (tipo_actor != null &&  !tipo_actor.trim().equals("")) {
+			sentencia += " AND g.tipo_actor = '" + tipo_actor+"'";
+		}
+		
+		if (vereda != null &&  !vereda.trim().equals("")) {
+
+			sentencia += " AND UPPER(h.vereda_corregimiento) LIKE '%"
+					+ vereda.toUpperCase().trim() + "%'";
+
+		}
+		
+		if (testigos != null &&  !testigos.trim().equals("")) {
+			sentencia += " AND h.testigo = '" + testigos+"'";
+		}
+		
+		if (documentacion != null &&  !documentacion.trim().equals("")) {
+			sentencia += " AND h.documentacion = '" + documentacion+"'";
+		}
+		
+		if (tipo_hecho != null &&  !tipo_hecho.trim().equals("")) {
+			sentencia += " AND h.tipo_hecho = '" + tipo_hecho+"'";
+		}
+		
+		
+		if (riesgo != null &&  !riesgo.trim().equals("")) {
+			sentencia += " AND prt.riesgo = '" + riesgo+"'";
+		}
+		if (medida != null &&  !medida.trim().equals("")) {
+			sentencia += " AND prt.medida = '" + medida+"'";
+		}
+		if (proteccion != null &&  !proteccion.trim().equals("")) {
+			sentencia += " AND prt.proteccion = '" + proteccion+"'";
+		}
+		
+		
+		if (denuncia != null &&  !denuncia.trim().equals("")) {
+			sentencia += " AND r.denuncia = '" + denuncia+"'";
+		}
+		if (victima != null &&  !victima.trim().equals("")) {
+			sentencia += " AND r.victima = '" + victima+"'";
+		}
+		if (donde != null &&  !donde.trim().equals("")) {
+			sentencia += " AND r."+donde+" = 'S'";
+		}
+		
+		
+		
+		if (tipoAtencion != null &&  !tipoAtencion.trim().equals("")) {
+			sentencia += " AND a."+tipoAtencion+" = 'S'";
+		}
+		if (impacto != null &&  !impacto.trim().equals("")) {
+			sentencia += " AND a.impacto = '" + impacto+"'";
+		}
+		if (restablecimiento != null &&  !restablecimiento.trim().equals("")) {
+			sentencia += " AND a.restablecimiento = '" + restablecimiento+"'";
+		}
+		
+		if (donde2 != null &&  !donde2.trim().equals("")) {
+			sentencia += " AND a."+donde2+" = 'S'";
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		sentencia += " ORDER BY c.id, m.nombres, m.apellidos";
 

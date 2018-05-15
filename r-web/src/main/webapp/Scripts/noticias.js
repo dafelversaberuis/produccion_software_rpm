@@ -4710,7 +4710,43 @@ function cargarCasos() {
 	+ "&fecha_atencion="+ encodeURIComponent(document.getElementById("fecha_atencion").value)
 	+ "&fecha_atencion2="+ encodeURIComponent(document.getElementById("fecha_atencion2").value)
 	+ "&departamento_hechos="+ encodeURIComponent(document.getElementById("departamento_hechos2").value)
-	+ "&municipio_hechos="+ encodeURIComponent(document.getElementById("municipio_hechos2").value);
+	+ "&municipio_hechos="+ encodeURIComponent(document.getElementById("municipio_hechos2").value)
+	
+	
+	+ "&amenazas="+ encodeURIComponent(document.getElementById("amenazas").value)
+	+ "&delitos="+ encodeURIComponent(document.getElementById("delitos").value)
+	+ "&libertades="+ encodeURIComponent(document.getElementById("libertades").value)
+	+ "&impactosIndividuales="+ encodeURIComponent(document.getElementById("impactosIndividuales").value)
+	+ "&impactosColectivos="+ encodeURIComponent(document.getElementById("impactosColectivos").value)
+	+ "&conocido="+ encodeURIComponent(document.getElementById("conocido").value)
+	+ "&sexo="+ encodeURIComponent(document.getElementById("sexo").value)
+	+ "&genero="+ encodeURIComponent(document.getElementById("genero").value)
+	+ "&edad="+ encodeURIComponent(document.getElementById("edad").value)
+	+ "&tipo_actor="+ encodeURIComponent(document.getElementById("tipo_actor").value)
+	+ "&vereda="+ encodeURIComponent(document.getElementById("vereda").value)
+	+ "&testigos="+ encodeURIComponent(document.getElementById("testigos").value)
+	+ "&documentacion="+ encodeURIComponent(document.getElementById("documentacion").value)
+	+ "&tipo_hecho="+ encodeURIComponent(document.getElementById("tipo_hecho").value)
+	+ "&riesgo="+ encodeURIComponent(document.getElementById("riesgo").value)
+	+ "&medida="+ encodeURIComponent(document.getElementById("medida").value)
+	+ "&proteccion="+ encodeURIComponent(document.getElementById("proteccion").value)
+	
+	+ "&denuncia="+ encodeURIComponent(document.getElementById("denuncia").value)
+	+ "&victima="+ encodeURIComponent(document.getElementById("victima").value)
+	+ "&donde="+ encodeURIComponent(document.getElementById("donde").value)
+	
+	+ "&tipoAtencion="+ encodeURIComponent(document.getElementById("tipoAtencion").value)
+	+ "&impacto="+ encodeURIComponent(document.getElementById("impacto").value)
+	+ "&restablecimiento="+ encodeURIComponent(document.getElementById("restablecimiento").value)
+	+ "&donde2="+ encodeURIComponent(document.getElementById("donde2").value);
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	  
 	ajax.onreadystatechange = function() {
@@ -4725,6 +4761,7 @@ function cargarCasos() {
 			} else if (ajax.status == 404) {
 				document.getElementById('detalleAdministradores').innerHTML = "-Inexistencia, contacte administrador-";
 			} else {
+				//document.getElementById('detalleAdministradores').innerHTML = ajax.responseText;
 				document.getElementById('detalleAdministradores').innerHTML = "-Error, contacte administrador";
 			}
 		}

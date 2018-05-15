@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class Conexion {
 
 	// Configuracion de la conexion a la base de datos
@@ -27,7 +30,7 @@ public class Conexion {
 		DB_driver = "com.mysql.jdbc.Driver";
 		
 		//localhost
-//		url = "jdbc:mysql://localhost:3306/produccion_fundacionruta";
+//		url = "jdbc:mysql://localhost:3306/fundacionruta";
 //		username = "root";
 //		password = "12345678";
 		
@@ -56,6 +59,45 @@ public class Conexion {
 		}
 
 	}
+	
+	
+//	/**
+//	 * Instancia uan nueva conexión para realizar CRUD'S
+//	 */
+//	public Conexion() {
+//		try {
+//
+//			// **************openshuftV3********************
+//			String DB_driver = "com.mysql.jdbc.Driver";
+//
+////			String url = "jdbc:postgresql://postgresql:5432/produccion_consultoria";
+////			String username = "dannypipe_consultoria";
+////			String password = "meli0523_consultoria";
+////			Class.forName(DB_driver);
+////			con = DriverManager.getConnection(url, username, password);
+//			// ***************************************
+//
+////			 *********Datasource_local***************************     
+//			 InitialContext ctx = new InitialContext();
+//			 DataSource ds = (DataSource) ctx.lookup("java:/rpm");
+//			 con = ds.getConnection();
+//			// ***************************************************
+//
+//			// **************openshuftV2********************
+////			 InitialContext ctx = new InitialContext();
+////			 DataSource ds = (DataSource)
+////			 ctx.lookup("java:jboss/datasources/PostgreSQLDS");
+////			 con = ds.getConnection();
+//			// ***************************************************
+//			con.setAutoCommit(true);
+//
+//		} catch (Exception e) {
+//			
+//		}
+//
+//	}
+	
+	
 
 	// Constructor con parmetros
 	Conexion(String driver, String url, String usuario, String passw) {

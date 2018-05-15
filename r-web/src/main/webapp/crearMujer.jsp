@@ -248,7 +248,7 @@ List<Object[]> etnias = bAdministrarPublicaciones.getEtnias();
 
 
 										</tr>
-										
+									
 										<tr>
 
 											<td>Nombres *:</td>

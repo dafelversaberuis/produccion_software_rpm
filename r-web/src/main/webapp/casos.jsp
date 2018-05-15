@@ -202,8 +202,20 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 
 	    <center>
 	    <hr width="100%">
+	    <table border="1"><tr><th>Criterios sólo de consulta(cruce campos, presione consultar e infiera en los resultados)</th><tr><td>
 	    
 	    <table border="0" width="100%" cellpadding="2">
+	    
+	   			 <tr>
+
+					<td colspan="3" style="font-weight: bold">Filtros por datos generales de la mujer:<br/></td>
+					
+
+
+				</tr>
+	    
+	    
+	    
 				
 				<tr>
 
@@ -233,6 +245,8 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 
 				</tr>
 				
+				
+				
 				<tr>
 
 					<td>Nombres o parte de éste:</td>
@@ -253,9 +267,223 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 													<option value="N" >NO</option>
 													
 											</select></td>
+											
+										
+				</tr>
+				
+				
+				 <tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por información hechos victimizantes:<br/></td>
+					
+
+
 				</tr>
 				
 				<tr>
+
+					<td>Amenaza:</td>
+					<td>
+					<select name="amenazas" id="amenazas" style="width:300px" >
+	<option value="" selected>---</option>
+	<% 
+	List<Object[]> amenazas = bAdministrarPublicaciones.getAmenazas();
+	if (amenazas!=null && amenazas.size() > 0) {
+		for(Object[] c: amenazas){
+			%>
+			<option value="<%=c[0]%>"><%=c[1]%></option>
+			<%
+			
+		}
+		
+			}
+	%>
+</select>
+					</td>
+						<td>Delito:</td>
+											<td><select name="delitos" id="delitos" style="width:300px">
+	<option value="" selected>---</option>
+	<% 
+	
+	List<Object[]> delitos = bAdministrarPublicaciones.getDelitos();
+	if (delitos!=null && delitos.size() > 0) {
+		for(Object[] c: delitos){
+			%>
+			<option value="<%=c[0]%>"><%=c[1]%></option>
+			<%
+			
+		}
+		
+			}
+	%>
+</select></td>
+
+
+				</tr>
+				
+				
+					<tr>
+
+					<td>Libertad:</td>
+					<td>
+					<select name="libertades" id="libertades" style="width:300px" >
+	<option value="" selected>---</option>
+	<%  List<Object[]> libertades = bAdministrarPublicaciones.getLibertades(); 
+	if (libertades!=null && libertades.size() > 0) {
+		for(Object[] c: libertades){
+			%>
+			<option value="<%=c[0]%>"><%=c[1]%></option>
+			<%
+			
+		}
+		
+			}
+	%>
+</select>
+					</td>
+						<td></td>
+											<td></td>
+
+
+				</tr>
+				
+				
+				
+				
+				
+				<tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por información impacto psicosocial:<br/></td>
+					
+
+
+				</tr>
+				
+				<tr>
+
+					<td>Impacto individual:</td>
+					<td>
+				<select name="impactosIndividuales" id="impactosIndividuales" style="width:300px" >
+	<option value="" selected>---</option>
+	<%  
+	List<Object[]> impactosIndividuales = bAdministrarPublicaciones.getIndividuales();
+	if (impactosIndividuales!=null && impactosIndividuales.size() > 0) {
+		for(Object[] c: impactosIndividuales){
+			%>
+			<option value="<%=c[0]%>"><%=c[1]%></option>
+			<%
+			
+		}
+		
+			}
+	%>
+</select>
+					</td>
+						<td>Impacto organizativo o colectivo :</td>
+											<td>
+											
+											<select name="impactosColectivos" id="impactosColectivos" style="width:300px">
+	<option value="" selected>---</option>
+	<% 
+	List<Object[]> impactosColectivos = bAdministrarPublicaciones.getColectivos();
+	if (impactosColectivos!=null && impactosColectivos.size() > 0) {
+		for(Object[] c: impactosColectivos){
+			%>
+			<option value="<%=c[0]%>"><%=c[1]%></option>
+			<%
+			
+		}
+		
+			}
+	%>
+</select>
+											
+											
+											
+											</td>
+
+
+				</tr>
+				
+				<tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por agresores:<br/></td>
+					
+
+
+				</tr>
+				
+				<tr>
+
+					<td>¿ Conoce el agresor ?:</td>
+		<td><select name="conocido" id="conocido"  style="width:250px" 
+			>
+				<option value="" selected>---</option>
+				<option value="S">SI</option>
+				<option value="N">NO</option>
+		</select></td>
+						<td>Sexo del agresor:</td>
+		<td><select name="sexo" id="sexo" style="width:250px">
+				<option value="" selected>---</option>
+				<option value="M">MASCULINO</option>
+				<option value="F">FEMENINO</option>
+				<option value="A">AMBOS</option>
+
+		</select></td>
+
+
+				</tr>
+				
+				
+				<tr>
+		
+		<td>Género del agresor:</td>
+		<td><select name="genero" id="genero" style="width:250px">
+				<option value="" selected>---</option>
+				<%
+				List<Object[]> generos = bAdministrarPublicaciones.getGeneros();
+			if(generos!=null && generos.size()>0){
+				for(Object[] d: generos){%>
+					
+					<option value="<%=d[0] %>" ><%=d[1] %></option>
+					
+					
+					<%
+				}
+				
+			}
+			%>
+
+		</select></td>
+		
+		
+		
+		<td>Edad del agresor:</td>
+		<td><select name="edad" id="edad" style="width:250px">
+		<option value="">---</option>
+		<option value="0">Varias</option>
+		<%
+		
+		for(int i=10; i<=100; i++){
+			%>
+			
+			<option value="<%=i%>"><%=i%> años</option>
+			
+			<%												
+		}
+		
+		
+		%>
+		    
+		</select>
+		
+		</td>
+		
+	</tr>
+				
+				
+				
+			<tr>
 					<td>Tipo de agresor(actor):</td>
 					<td>
 					<select name="actor" id="actor" style="width:250px" >
@@ -281,39 +509,29 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 							
 					</select>
 					
-					</td>
-					<td>Hechos denunciados: </td>
-					<td><select name="hecho_denunciado" id="hecho_denunciado" style="width:250px">
-													<option value="" selected>---</option>
-													<option value="S" >SI</option>
-													<option value="N" >NO</option>
-													
-											</select></td>
+					</td>	
+					
+					<td><span id="span_ta1" style="color: black;">Organización del actor:</span></td>
+		<td><select name="tipo_actor" id="tipo_actor" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="B" >BLOQUE</option>
+				<option value="F" >FRENTE</option>
+				<option value="U" >UNIDAD</option>
+				<option value="O" >OTRO</option>
+		</select></td>
+					
+				
 				</tr>
 				
 				
+				
 				<tr>
-											<td>Departamento hechos:</td>
-											<td><select name="departamento_hechos2" id="departamento_hechos2" style="width:250px" onchange="cargarMunicipioCombo('municipio_hechos2','departamento_hechos2')">
-													<option value="" selected>---</option>
-												<%
-												if(departamentos!=null && departamentos.size()>0){
-													for(Object[] d: departamentos){%>
-														
-														<option value="<%=d[0] %>" ><%=d[1] %></option>
-														
-														
-														<%
-													}
-													
-												}
-												%>
-											</select></td>
-											<td>Municipio hechos:</td>
-											<td><span id="span_municipio_hechos2" style="color: black"><select name="municipio_hechos2" id="municipio_hechos2" style="width:250px">
-																<option value="" selected>---</option>
-											</select></span></td>
-										</tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por hechos:<br/></td>
+					
+
+
+				</tr>
 				
 				<tr>
 				
@@ -341,10 +559,247 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 				</tr>
 				
 				<tr>
+											<td>Departamento hechos:</td>
+											<td><select name="departamento_hechos2" id="departamento_hechos2" style="width:250px" onchange="cargarMunicipioCombo('municipio_hechos2','departamento_hechos2')">
+													<option value="" selected>---</option>
+												<%
+												if(departamentos!=null && departamentos.size()>0){
+													for(Object[] d: departamentos){%>
+														
+														<option value="<%=d[0] %>" ><%=d[1] %></option>
+														
+														
+														<%
+													}
+													
+												}
+												%>
+											</select></td>
+											<td>Municipio hechos:</td>
+											<td><span id="span_municipio_hechos2" style="color: black"><select name="municipio_hechos2" id="municipio_hechos2" style="width:250px">
+																<option value="" selected>---</option>
+											</select></span></td>
+										</tr>
+										
+										
+										
+										<tr>
+										<td>
+										Nombre vereda-corregimiento o parte de este:
+										</td>
+										<td>	
+	<input id="vereda" name="vereda" type="text"
+														value="" style="width:250px"/></td>
+										<td>
+										¿Hay testigos?
+										
+										</td>
+										<td>
+										<select name="testigos" id="testigos" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+			
+	</select>
+										</td>
+										
+										
+										
+										</tr>
+										
+										
+										
+										
+									<tr>
+									<td>¿ Tiene documentación de los hechos ?:</td>
+	<td>
+	
+	<select name="documentacion" id="documentacion" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+			
+	</select>
+				
+				
+		
+	
+	</td>
+	
+	<td>Tipo de hecho:</td>
+	<td>
+	
+	<select name="tipo_hecho" id="tipo_hecho" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="A" >HECHO AISLADO</option>
+				<option value="R" >HECHO QUE SE HA REPETIDO</option>
+			
+	</select>
+				
+				
+		
+	
+	</td>
+	
+									
+									</tr>
+									
+										
+				
+				<tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por medidas de protección:<br/></td>
+					
+
+
+				</tr>
+				
+				<tr>
+				<td>¿ Se considera en riesgo ?:</td>
+	<td>
+	
+	<select name="riesgo" id="riesgo" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+			
+	</select></td>
+	
+	<td><span id="span_medida" style="color: black">¿ Ha solicitado alguna medida de protección ?:</span></td>
+	<td>
+	
+	<select name="medida" id="medida" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+			
+	</select>
+	</td>
+	
+	
+				
+				
+				</tr>
+				
+				
+				<tr>
+				<td><span id="span_proteccion" style="color: black">¿ Le ha sido brindada alguna protección ?:</span></td>
+	<td>
+	
+	<select name="proteccion" id="proteccion" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+			</select></td>
+				
+				
+				<td>
+				</td>
+				
+				</tr>
+				
+				
+				
+				
+				<tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por rutas de atención:<br/></td>
+					
+
+
+				</tr>
+				
+				<tr>
+				<td>Hechos denunciados: </td>
+					<td><select name="hecho_denunciado" id="hecho_denunciado" style="width:250px">
+													<option value="" selected>---</option>
+													<option value="S" >SI</option>
+													<option value="N" >NO</option>
+													
+											</select></td>
+											
+											<td>¿Sabe algo sobre lo que ha pasado con la denuncia ?:</td>
+	<td>
+	
+	<select name="denuncia" id="denuncia" style="width:120px"  >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+				
+				
+			
+	</select>
+		
+		
+	
+	</td>
+				
+				</tr>
+				
+				
+				<tr>
+				<td>¿Ha hecho alguna gestión para acreditarse como víctima ?:</td>
+	<td>
+	
+	<select name="victima" id="victima" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+				
+				
+			
+	</select>
+		
+		
+	
+	</td>
+	
+	<td>¿Donde denunció ?:</td>
+	<td>
+	
+	<select name="donde" id="donde" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="lugar_denuncia1" >Fiscalía</option>
+				<option value="lugar_denuncia2" >Policía</option>
+				<option value="lugar_denuncia3" >Defensoría</option>
+				<option value="lugar_denuncia4" >Personería</option>
+				<option value="lugar_denuncia5" >Unidad de víctimas</option>
+				<option value="lugar_denuncia6" >Comisaría</option>
+				<option value="lugar_denuncia7" >Organización social</option>
+				<option value="lugar_denuncia8" >Otra</option>
+				
+				
+			
+	</select>
+		
+		
+	
+	</td>
+				
+				
+				
+				</tr>
+				
+				
+				
+				
+				
+				<tr>
+
+					<td colspan="3" style="font-weight: bold"><br/>Filtros por acompañamiento psicosocial:<br/></td>
+					
+
+
+				</tr>
+				
+				
+				
+				
+				<tr>
 					<td>Persona que realizó atención:</td>
 					<td>
 					<select name="responsable" id="responsable" style="width:250px" >
-													<option value="" selected>Seleccione..</option>
+													<option value="" selected>---</option>
 												<%
 												if(administradores!=null && administradores.size()>0){
 													for(Administrador d: administradores){%>
@@ -398,12 +853,85 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 				</tr>
 				
 				
+				
+				<tr>
+				
+				<td>Tipo de atención:</td>
+	<td>
+	
+	<select name="tipoAtencion" id="tipoAtencion" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="tipo_atencion1" >Atención en crisis</option>
+				<option value="tipo_atencion2" >Solución de problemas de momento actual</option>
+				<option value="tipo_atencion3" >Manejo de sentimientos de angustia</option>
+				<option value="tipo_atencion4" >Orientación para toma de decisiones</option>
+				<option value="tipo_atencion5" >Asesoría jurídica sobre las rutas de atención</option>
+				<option value="tipo_atencion6" >Acompañamiento a instituciones para restabecimiento de los derechos</option>
+				<option value="tipo_atencion7" >Remisión a otra instancia</option>
+				
+				
+				
+			
+	</select>
+		
+		
+	
+	</td>
+	
+	
+	<td>Impacto del acompañamiento psicosocial:</td><td><select name="impacto" id="impacto" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="M" >LA MUJER ESTÁ MEJOR</option>
+				<option value="I" >LA MUJER SIGUE IGUAL</option>
+				<option value="E" >LA MUJER EMPEORÓ</option>
+	</select></td>
+				
+				</tr>
+				
+				<tr>
+				<td>¿Se logra restablecimiento de sus derechos?:</td>
+	<td>
+	
+	<select name="restablecimiento" id="restablecimiento" style="width:250px" >
+				<option value="" selected>---</option>
+				<option value="S" >SI</option>
+				<option value="N" >NO</option>
+				
+			
+	</select>
+		
+		</td>
+		<td>¿  A través de cual institución activó la ruta de atención ?:</td>
+		<td>
+		<select name="donde2" id="donde2" style="width:120px" >
+				<option value="" selected>---</option>
+				<option value="institucion1" >Fiscalía</option>
+				<option value="institucion2" >Policía</option>
+				<option value="institucion3" >Defensoría</option>
+				<option value="institucion4" >Personería</option>
+				<option value="institucion5" >Unidad de víctimas</option>
+				<option value="institucion6" >Comisaría</option>
+				<option value="institucion7" >Organización social</option>
+				<option value="institucion8" >Otra</option>
+				
+				
+			
+	</select>
+		</td>
+		
+		
+		
+		
+		
+				
+				</tr>
 			
 			</table>
+			</td></tr></table>
 	    	
 	    	    <br/>
 	    	<input
-									type="button" value=" Consultar " onclick="cargarCasos()" />
+									type="button" value=" Consultar, filtrar, cruzar y totalizar" onclick="cargarCasos()" />
 									<hr width="100%">
 
 
@@ -423,7 +951,9 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 
 	if(variableRegreso==null){
 		variableRegreso = "";
-	}else{
+	}  
+	
+	//else{
 		%>
 		
 		<script>
@@ -434,7 +964,7 @@ List<Object[]> departamentos = bAdministrarPublicaciones.getDepartamentos();
 		<%
 		
 		
-	}
+	//}
 	
 	%>
 

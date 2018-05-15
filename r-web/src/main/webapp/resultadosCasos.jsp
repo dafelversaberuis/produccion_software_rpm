@@ -42,6 +42,32 @@ String departamento_hechos = request.getParameter("departamento_hechos");
 String municipio_hechos = request.getParameter("municipio_hechos");
 
 
+String amenazas = request.getParameter("amenazas");
+String delitos=request.getParameter("delitos");
+String libertades=request.getParameter("libertades");
+String impactosIndividuales=request.getParameter("impactosIndividuales");
+String impactosColectivos=request.getParameter("impactosColectivos");
+String conocido=request.getParameter("conocido");
+String sexo=request.getParameter("sexo");
+String genero=request.getParameter("genero");
+String edad=request.getParameter("edad");
+String tipo_actor=request.getParameter("tipo_actor");
+String vereda=request.getParameter("vereda");
+String testigos=request.getParameter("testigos");
+String documentacion=request.getParameter("documentacion");
+String tipo_hecho=request.getParameter("tipo_hecho");
+String riesgo=request.getParameter("riesgo");
+String medida=request.getParameter("medida");
+String proteccion=request.getParameter("proteccion");
+
+String denuncia=request.getParameter("denuncia");
+String victima=request.getParameter("victima");
+String donde=request.getParameter("donde");
+
+String tipoAtencion=request.getParameter("tipoAtencion");
+String impacto=request.getParameter("impacto");
+String restablecimiento=request.getParameter("restablecimiento");
+String donde2=request.getParameter("donde2");
 
 
 
@@ -60,13 +86,50 @@ if(d!=null && d.equals("null")){
 	d = null;	
 }
 
+if(vereda!=null && vereda.equals("null")){
+	
+	vereda = null;	
+}
 
 
  
 
-   
-List<Object[]> mujeres = bAdministrarPublicaciones.getCasos(n,a,d,etnia,cabeza_hogar,actor,hecho_denunciado,fecha_hechos,fecha_hechos2,responsable,numero_atencion,fecha_atencion,fecha_atencion2,departamento_hechos,municipio_hechos);
-	if (mujeres.size() > 0) {
+
+List<Object[]> mujeres = bAdministrarPublicaciones.getCasos(n,a,d,etnia,cabeza_hogar,actor,hecho_denunciado,fecha_hechos,fecha_hechos2,responsable,numero_atencion,fecha_atencion,fecha_atencion2,departamento_hechos,municipio_hechos,
+amenazas,
+delitos,
+libertades,
+impactosIndividuales,
+impactosColectivos,
+conocido,
+sexo,
+genero,
+edad,
+tipo_actor,
+vereda,
+testigos,
+documentacion,
+tipo_hecho,
+riesgo,
+medida,
+proteccion,
+denuncia,
+victima,
+donde,
+tipoAtencion,
+impacto,
+restablecimiento,
+donde2);
+
+
+
+
+
+
+
+
+
+if (mujeres!=null && mujeres.size() > 0) {
 %>
 <table width="100%" border="0" cellspacing="2" cellpadding="2">
 	
@@ -86,7 +149,7 @@ List<Object[]> mujeres = bAdministrarPublicaciones.getCasos(n,a,d,etnia,cabeza_h
 		</td>
 		
 		<td bgcolor="#EE486C">
-		<div align="center" style="color:#FFFFFF; font-size:12px">FECHA REGISTRO</div>
+		<div align="center" style="color:#FFFFFF; font-size:12px">FECHA REGISTRO EN SISTEMA</div>
 		</td>
 		<td bgcolor="#EE486C">
 		<div align="center" style="color:#FFFFFF; font-size:12px">MUJER</div>
@@ -129,23 +192,23 @@ List<Object[]> mujeres = bAdministrarPublicaciones.getCasos(n,a,d,etnia,cabeza_h
 		</td>
 		
 		  
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Amenzas a la vida, integridad y/o seguridad personal', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="amenazas.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/a_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Delitos contra la libertad e integridd sexual', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="delitos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/d_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Libertad personal', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="libertades.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/l_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank"  onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Amenzas a la vida, integridad y/o seguridad personal', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="amenazas.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/a_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;" ></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Delitos contra la libertad e integridd sexual', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="delitos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/d_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Información de los hechos victamizantes: </b>Libertad personal', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="libertades.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/l_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
 		
 		
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos individuales', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="individuales.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/i_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos familiares', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="familiares.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/f_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos organizativos / colectivos', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="colectivos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/o_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos individuales', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="individuales.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/i_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos familiares', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="familiares.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/f_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>	
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Información del impacto psicosocial: </b>Impactos organizativos / colectivos', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="colectivos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/o_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
 		
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Datos del agresor o agresores</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="agresores.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/a_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Descripción de los hechos</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="hechos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/h_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Datos del agresor o agresores</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="agresores.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/a_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank" onmouseover="Tip('<b>Descripción de los hechos</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="hechos.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/h_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
 		
-		<td align="center" bgcolor="<%=color %>" "><a href="#" onmouseover="Tip('<b>Protección</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" onclick="window.open('/r-web/crearProteccion.jsp?id=<%=i[0]%>', 'popup', 'toolbar=no, menubar=no, scrollbars=no, resizable=no, width=990, height=270'); return false;"><img src="imagenes/p_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" "><a  href="#" onmouseover="Tip('<b>Protección</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" onclick="window.open('/r-web/crearProteccion.jsp?id=<%=i[0]%>', 'popup', 'toolbar=no, menubar=no, scrollbars=no, resizable=no, width=990, height=270'); return false;"><img src="imagenes/p_minuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
 	
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Acceso a la justicia / implementación de las rutas de atención</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="rutasAtencion.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/r_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a onmouseover="Tip('<b>Acompañamiento psicosocial</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="acompanamiento.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/chat_1.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
-		<td align="center" bgcolor="<%=color %>" ><a href="#" onclick="cargarEliminarCaso('<%=i[0] %>'); return false;" style="font-size: 12px">Eliminar</a></td>
+		<td align="center" bgcolor="<%=color %>" ><a  target="_blank" onmouseover="Tip('<b>Acceso a la justicia / implementación de las rutas de atención</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="rutasAtencion.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>" ><img src="imagenes/r_mayuscula.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a target="_blank"  onmouseover="Tip('<b>Acompañamiento psicosocial</b>', BALLOON, true, ABOVE, true, OFFSETX, -10, WIDTH, 360, TEXTALIGN, 'justify', FADEIN, 600, FADEOUT, 600, PADDING, 8)" href="acompanamiento.jsp?id=<%=i[0]%>&nc=<%="C"+i[0] + " - "+i[3] + " " + i[4]  %>"><img src="imagenes/chat_1.png" style="width:17px; height:17px; vertical-align:bottom; align:center; border:none; cursor: pointer;"></a></td>
+		<td align="center" bgcolor="<%=color %>" ><a  href="#" onclick="cargarEliminarCaso('<%=i[0] %>'); return false;" style="font-size: 12px">Eliminar</a></td>
 		
 	</tr>
 	<%
